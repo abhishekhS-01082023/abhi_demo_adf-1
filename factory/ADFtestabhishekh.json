@@ -1,0 +1,9 @@
+{
+	"name": "ADFtestabhishekh",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b34bdb95-5db5-474c-9903-b658967fe05c",
+		"tenantId": "380a88f6-5447-406c-bebb-2c908f53f0a3"
+	}
+}

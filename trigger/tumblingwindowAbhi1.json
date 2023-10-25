@@ -1,0 +1,27 @@
+{
+	"name": "tumblingwindowAbhi1",
+	"properties": {
+		"description": "Tumbling window trigger",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "abhitestpipeline2",
+				"type": "PipelineReference"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Hour",
+			"interval": 24,
+			"startTime": "2023-10-19T11:46:00Z",
+			"endTime": "2023-10-20T11:46:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

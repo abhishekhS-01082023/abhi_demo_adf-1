@@ -1,0 +1,20 @@
+{
+	"name": "inputdatadataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "abhishekhblobstorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "data.txt",
+				"folderPath": "input",
+				"container": "testcontainerabhishekh"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
