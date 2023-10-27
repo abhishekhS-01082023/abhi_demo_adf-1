@@ -1,0 +1,17 @@
+{
+	"name": "ContosoRetail",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "This is the contoso retail database",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=LAPTOP-M01N8JHM\\MSSQLSERVER01;initial catalog=ContosoRetailDW;user id=ab",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4MDk5MDc3Yy1hMGE1LTQwZmUtYjFmMS04NjYyMWFjMTU0ZjAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
