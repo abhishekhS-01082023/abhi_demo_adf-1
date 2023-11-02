@@ -67,6 +67,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedserviceAbhi'"
 		},
+		"ls_compareFile_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_compareFile'"
+		},
 		"ls_scd_demo_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_scd_demo'"
@@ -147,6 +151,9 @@
 					},
 					"linkedserviceAbhi_connectionString": {
 						"value": "[parameters('linkedserviceAbhi_connectionString')]"
+					},
+					"ls_compareFile_connectionString": {
+						"value": "[parameters('ls_compareFile_connectionString')]"
 					},
 					"ls_scd_demo_connectionString": {
 						"value": "[parameters('ls_scd_demo_connectionString')]"
