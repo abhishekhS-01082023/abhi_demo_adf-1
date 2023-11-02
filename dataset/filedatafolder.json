@@ -1,0 +1,27 @@
+{
+	"name": "filedatafolder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_delete_file",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
+				"folderPath": "input/data",
+				"container": "testcontainerabhishekh"
+			}
+		}
+	}
+}
