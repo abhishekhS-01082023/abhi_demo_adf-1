@@ -83,6 +83,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_delete_file'"
 		},
+		"ls_demoexcelforIteration_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_demoexcelforIteration'"
+		},
 		"ls_scd_demo_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_scd_demo'"
@@ -197,6 +201,9 @@
 					"ls_delete_file_connectionString": {
 						"value": "[parameters('ls_delete_file_connectionString')]"
 					},
+					"ls_demoexcelforIteration_connectionString": {
+						"value": "[parameters('ls_demoexcelforIteration_connectionString')]"
+					},
 					"ls_scd_demo_connectionString": {
 						"value": "[parameters('ls_scd_demo_connectionString')]"
 					},
@@ -230,6 +237,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'ADFtestabhishekh_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "ADFtestabhishekh_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ADFtestabhishekh_ArmTemplate_2')]"
 			]
 		}
 	]

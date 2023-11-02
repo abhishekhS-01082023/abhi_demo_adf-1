@@ -62,6 +62,9 @@
 		"ls_delete_file_connectionString": {
 			"value": ""
 		},
+		"ls_demoexcelforIteration_connectionString": {
+			"value": ""
+		},
 		"ls_scd_demo_connectionString": {
 			"value": ""
 		},
