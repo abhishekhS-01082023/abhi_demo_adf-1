@@ -39,6 +39,18 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'abhishekhblobstorage'"
 		},
+		"cdcoutput_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'cdcoutput'"
+		},
+		"change_data_capture_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'change_data_capture'"
+		},
+		"change_data_capture_old_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'change_data_capture_old'"
+		},
 		"compare_data_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'compare_data'"
@@ -106,6 +118,15 @@
 					},
 					"abhishekhblobstorage_connectionString": {
 						"value": "[parameters('abhishekhblobstorage_connectionString')]"
+					},
+					"cdcoutput_connectionString": {
+						"value": "[parameters('cdcoutput_connectionString')]"
+					},
+					"change_data_capture_connectionString": {
+						"value": "[parameters('change_data_capture_connectionString')]"
+					},
+					"change_data_capture_old_connectionString": {
+						"value": "[parameters('change_data_capture_old_connectionString')]"
 					},
 					"compare_data_connectionString": {
 						"value": "[parameters('compare_data_connectionString')]"

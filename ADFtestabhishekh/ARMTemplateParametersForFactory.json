@@ -29,6 +29,15 @@
 		"abhishekhblobstorage_connectionString": {
 			"value": ""
 		},
+		"cdcoutput_connectionString": {
+			"value": ""
+		},
+		"change_data_capture_connectionString": {
+			"value": ""
+		},
+		"change_data_capture_old_connectionString": {
+			"value": ""
+		},
 		"compare_data_connectionString": {
 			"value": ""
 		},
