@@ -17,6 +17,28 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/outputdatadataset')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "abhishekhblobstorage",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "output.txt",
+						"folderPath": "output",
+						"container": "testcontainerabhishekh"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/sql_scripts')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -165,7 +187,9 @@
 				"annotations": [],
 				"lastPublishTime": "2023-10-19T13:34:43Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/outputdatadataset')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/lookup_sql_script_execution')]",
