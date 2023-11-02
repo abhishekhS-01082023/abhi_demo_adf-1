@@ -67,6 +67,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedserviceAbhi'"
 		},
+		"ls_ReadAllFiles_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_ReadAllFiles'"
+		},
 		"ls_compareFile_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_compareFile'"
@@ -152,14 +156,14 @@
 					"linkedserviceAbhi_connectionString": {
 						"value": "[parameters('linkedserviceAbhi_connectionString')]"
 					},
+					"ls_ReadAllFiles_connectionString": {
+						"value": "[parameters('ls_ReadAllFiles_connectionString')]"
+					},
 					"ls_compareFile_connectionString": {
 						"value": "[parameters('ls_compareFile_connectionString')]"
 					},
 					"ls_scd_demo_connectionString": {
 						"value": "[parameters('ls_scd_demo_connectionString')]"
-					},
-					"ls_sql_script_execution_connectionString": {
-						"value": "[parameters('ls_sql_script_execution_connectionString')]"
 					},
 					"ls_RestAPI_properties_typeProperties_url": {
 						"value": "[parameters('ls_RestAPI_properties_typeProperties_url')]"
@@ -181,6 +185,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_sql_script_execution_connectionString": {
+						"value": "[parameters('ls_sql_script_execution_connectionString')]"
 					},
 					"ContosoRetail_connectionString": {
 						"value": "[parameters('ContosoRetail_connectionString')]"

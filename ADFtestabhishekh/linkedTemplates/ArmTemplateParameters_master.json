@@ -50,6 +50,9 @@
 		"linkedserviceAbhi_connectionString": {
 			"value": ""
 		},
+		"ls_ReadAllFiles_connectionString": {
+			"value": ""
+		},
 		"ls_compareFile_connectionString": {
 			"value": ""
 		},
