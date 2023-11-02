@@ -56,6 +56,12 @@
 		"ls_compareFile_connectionString": {
 			"value": ""
 		},
+		"ls_data_connectionString": {
+			"value": ""
+		},
+		"ls_delete_file_connectionString": {
+			"value": ""
+		},
 		"ls_scd_demo_connectionString": {
 			"value": ""
 		},

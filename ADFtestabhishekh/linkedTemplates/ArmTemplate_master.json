@@ -75,6 +75,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_compareFile'"
 		},
+		"ls_data_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_data'"
+		},
+		"ls_delete_file_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_delete_file'"
+		},
 		"ls_scd_demo_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_scd_demo'"
@@ -162,8 +170,8 @@
 					"ls_compareFile_connectionString": {
 						"value": "[parameters('ls_compareFile_connectionString')]"
 					},
-					"ls_scd_demo_connectionString": {
-						"value": "[parameters('ls_scd_demo_connectionString')]"
+					"ls_data_connectionString": {
+						"value": "[parameters('ls_data_connectionString')]"
 					},
 					"ls_RestAPI_properties_typeProperties_url": {
 						"value": "[parameters('ls_RestAPI_properties_typeProperties_url')]"
@@ -186,11 +194,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"ls_delete_file_connectionString": {
+						"value": "[parameters('ls_delete_file_connectionString')]"
+					},
+					"ls_scd_demo_connectionString": {
+						"value": "[parameters('ls_scd_demo_connectionString')]"
+					},
 					"ls_sql_script_execution_connectionString": {
 						"value": "[parameters('ls_sql_script_execution_connectionString')]"
-					},
-					"ContosoRetail_connectionString": {
-						"value": "[parameters('ContosoRetail_connectionString')]"
 					}
 				}
 			},
@@ -211,6 +222,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ContosoRetail_connectionString": {
+						"value": "[parameters('ContosoRetail_connectionString')]"
 					}
 				}
 			},
