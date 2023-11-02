@@ -1,0 +1,30 @@
+{
+	"name": "DemoexcelforIteration",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_demoexcelforIteration",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sheetindex": {
+				"type": "int"
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "demo.xlsx",
+				"folderPath": "input",
+				"container": "abhishekhcontainer"
+			},
+			"sheetIndex": {
+				"value": "@dataset().sheetindex",
+				"type": "Expression"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
