@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
 		},
+		"AzureBlobStorage3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
+		},
+		"ContosoRetail_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ContosoRetail'"
+		},
 		"ContosoRetailLinkedService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ContosoRetailLinkedService'"
@@ -23,13 +31,33 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
+		"SqlServer2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer2'"
+		},
 		"abhishekhblobstorage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'abhishekhblobstorage'"
 		},
+		"compare_data_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'compare_data'"
+		},
+		"compare_data_old_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'compare_data_old'"
+		},
 		"linkedserviceAbhi_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedserviceAbhi'"
+		},
+		"ls_scd_demo_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_scd_demo'"
+		},
+		"ls_sql_script_execution_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sql_script_execution'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -64,21 +92,62 @@
 					"AzureBlobStorage2_connectionString": {
 						"value": "[parameters('AzureBlobStorage2_connectionString')]"
 					},
+					"AzureBlobStorage3_connectionString": {
+						"value": "[parameters('AzureBlobStorage3_connectionString')]"
+					},
 					"ContosoRetailLinkedService_connectionString": {
 						"value": "[parameters('ContosoRetailLinkedService_connectionString')]"
 					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
+					"SqlServer2_connectionString": {
+						"value": "[parameters('SqlServer2_connectionString')]"
+					},
 					"abhishekhblobstorage_connectionString": {
 						"value": "[parameters('abhishekhblobstorage_connectionString')]"
 					},
+					"compare_data_connectionString": {
+						"value": "[parameters('compare_data_connectionString')]"
+					},
+					"compare_data_old_connectionString": {
+						"value": "[parameters('compare_data_old_connectionString')]"
+					},
 					"linkedserviceAbhi_connectionString": {
 						"value": "[parameters('linkedserviceAbhi_connectionString')]"
+					},
+					"ls_scd_demo_connectionString": {
+						"value": "[parameters('ls_scd_demo_connectionString')]"
+					},
+					"ls_sql_script_execution_connectionString": {
+						"value": "[parameters('ls_sql_script_execution_connectionString')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "ADFtestabhishekh_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ContosoRetail_connectionString": {
+						"value": "[parameters('ContosoRetail_connectionString')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ADFtestabhishekh_ArmTemplate_0')]"
+			]
 		}
 	]
 }

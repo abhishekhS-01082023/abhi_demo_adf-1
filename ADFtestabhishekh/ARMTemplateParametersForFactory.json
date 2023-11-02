@@ -11,16 +11,37 @@
 		"AzureBlobStorage2_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"ContosoRetail_connectionString": {
+			"value": ""
+		},
 		"ContosoRetailLinkedService_connectionString": {
 			"value": ""
 		},
 		"SqlServer1_connectionString": {
 			"value": ""
 		},
+		"SqlServer2_connectionString": {
+			"value": ""
+		},
 		"abhishekhblobstorage_connectionString": {
 			"value": ""
 		},
+		"compare_data_connectionString": {
+			"value": ""
+		},
+		"compare_data_old_connectionString": {
+			"value": ""
+		},
 		"linkedserviceAbhi_connectionString": {
+			"value": ""
+		},
+		"ls_scd_demo_connectionString": {
+			"value": ""
+		},
+		"ls_sql_script_execution_connectionString": {
 			"value": ""
 		}
 	}
