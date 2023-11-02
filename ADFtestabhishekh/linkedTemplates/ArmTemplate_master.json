@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
 		},
+		"AzureBlobStorage4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage4'"
+		},
 		"ContosoRetail_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ContosoRetail'"
@@ -71,6 +75,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_sql_script_execution'"
 		},
+		"ls_RestAPI_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://restapi.adequateshop.com"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -107,6 +115,9 @@
 					"AzureBlobStorage3_connectionString": {
 						"value": "[parameters('AzureBlobStorage3_connectionString')]"
 					},
+					"AzureBlobStorage4_connectionString": {
+						"value": "[parameters('AzureBlobStorage4_connectionString')]"
+					},
 					"ContosoRetailLinkedService_connectionString": {
 						"value": "[parameters('ContosoRetailLinkedService_connectionString')]"
 					},
@@ -142,6 +153,9 @@
 					},
 					"ls_sql_script_execution_connectionString": {
 						"value": "[parameters('ls_sql_script_execution_connectionString')]"
+					},
+					"ls_RestAPI_properties_typeProperties_url": {
+						"value": "[parameters('ls_RestAPI_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -168,6 +182,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'ADFtestabhishekh_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "ADFtestabhishekh_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ADFtestabhishekh_ArmTemplate_1')]"
 			]
 		}
 	]

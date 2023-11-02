@@ -14,6 +14,9 @@
 		"AzureBlobStorage3_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage4_connectionString": {
+			"value": ""
+		},
 		"ContosoRetail_connectionString": {
 			"value": ""
 		},
@@ -52,6 +55,9 @@
 		},
 		"ls_sql_script_execution_connectionString": {
 			"value": ""
+		},
+		"ls_RestAPI_properties_typeProperties_url": {
+			"value": "http://restapi.adequateshop.com"
 		},
 		"containerUri": {
 			"value": ""
