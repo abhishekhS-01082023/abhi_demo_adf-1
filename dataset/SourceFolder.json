@@ -1,0 +1,17 @@
+{
+	"name": "SourceFolder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_compareFile",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "abhi1"
+			}
+		}
+	}
+}
