@@ -1,0 +1,73 @@
+{
+	"name": "change_data_capture_dataflow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "change_data_capture",
+						"type": "DatasetReference"
+					},
+					"name": "changeDataCapture1"
+				},
+				{
+					"dataset": {
+						"referenceName": "change_data_capture_old",
+						"type": "DatasetReference"
+					},
+					"name": "changeDataCapture2"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "cdc_output",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Hashcsv"
+				},
+				{
+					"name": "hashSQL"
+				},
+				{
+					"name": "exists1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          id as string,",
+				"          name as string,",
+				"          gender as string,",
+				"          salary as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> changeDataCapture1",
+				"source(output(",
+				"          id as string,",
+				"          name as string,",
+				"          gender as string,",
+				"          salary as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> changeDataCapture2",
+				"changeDataCapture1 derive(HashCSV = sha2(256,columns())) ~> Hashcsv",
+				"changeDataCapture2 derive(hashSQL = sha2(256,columns())) ~> hashSQL",
+				"Hashcsv, hashSQL exists(HashCSV == hashSQL,",
+				"     negate:false,",
+				"     broadcast: 'auto')~> exists1",
+				"exists1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
