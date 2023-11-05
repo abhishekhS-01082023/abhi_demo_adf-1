@@ -50,6 +50,9 @@
 		"linkedserviceAbhi_connectionString": {
 			"value": ""
 		},
+		"ls_GetDataFromFolder_connectionString": {
+			"value": ""
+		},
 		"ls_ReadAllFiles_connectionString": {
 			"value": ""
 		},
@@ -57,6 +60,12 @@
 			"value": ""
 		},
 		"ls_data_connectionString": {
+			"value": ""
+		},
+		"ls_data_folder_connectionString": {
+			"value": ""
+		},
+		"ls_data_output_connectionString": {
 			"value": ""
 		},
 		"ls_delete_file_connectionString": {

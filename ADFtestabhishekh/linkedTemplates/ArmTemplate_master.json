@@ -67,6 +67,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedserviceAbhi'"
 		},
+		"ls_GetDataFromFolder_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_GetDataFromFolder'"
+		},
 		"ls_ReadAllFiles_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_ReadAllFiles'"
@@ -78,6 +82,14 @@
 		"ls_data_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_data'"
+		},
+		"ls_data_folder_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_data_folder'"
+		},
+		"ls_data_output_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_data_output'"
 		},
 		"ls_delete_file_connectionString": {
 			"type": "secureString",
@@ -168,14 +180,14 @@
 					"linkedserviceAbhi_connectionString": {
 						"value": "[parameters('linkedserviceAbhi_connectionString')]"
 					},
+					"ls_GetDataFromFolder_connectionString": {
+						"value": "[parameters('ls_GetDataFromFolder_connectionString')]"
+					},
 					"ls_ReadAllFiles_connectionString": {
 						"value": "[parameters('ls_ReadAllFiles_connectionString')]"
 					},
 					"ls_compareFile_connectionString": {
 						"value": "[parameters('ls_compareFile_connectionString')]"
-					},
-					"ls_data_connectionString": {
-						"value": "[parameters('ls_data_connectionString')]"
 					},
 					"ls_RestAPI_properties_typeProperties_url": {
 						"value": "[parameters('ls_RestAPI_properties_typeProperties_url')]"
@@ -197,6 +209,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_data_connectionString": {
+						"value": "[parameters('ls_data_connectionString')]"
+					},
+					"ls_data_folder_connectionString": {
+						"value": "[parameters('ls_data_folder_connectionString')]"
+					},
+					"ls_data_output_connectionString": {
+						"value": "[parameters('ls_data_output_connectionString')]"
 					},
 					"ls_delete_file_connectionString": {
 						"value": "[parameters('ls_delete_file_connectionString')]"
