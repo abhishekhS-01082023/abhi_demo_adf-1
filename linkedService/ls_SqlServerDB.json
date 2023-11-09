@@ -1,0 +1,16 @@
+{
+	"name": "ls_SqlServerDB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=winappanddbserver.centralindia.cloudapp.azure.com,39103;initial catalog=G7CR-GreenMatters-Dev;user id=ReadOnly-GM-Dev",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3NmI2Y2U3YS02ZGQwLTRlYmQtOTE5OS1jNmQ0MzUwMzlmOTIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
